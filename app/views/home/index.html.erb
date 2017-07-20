@@ -3,8 +3,9 @@
 <% if current_user.nil? %>
 	<%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %><br />
 <% else %>
-	<%= link_to root_path, class: 'login-button' do %>Go to App<% end %><br />
+	<%= link_to rails_admin_path, class: 'login-button' do %>Go to App<% end %><br />
 <% end %>
+
 
 <% if user_signed_in? %>
   <%= link_to('Edit registration', edit_user_registration_path) %><br />
